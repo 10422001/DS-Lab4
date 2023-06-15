@@ -3,7 +3,8 @@ const credentials = {
     host: "localhost",
     database: "dominikocsofszki",
     password: `${process.env.DB_PASS}`,
-    port: 5432
+    port : `${process.env.PORT}` || 5432,
+    // port: 5432
 }
 
 const {Pool} = require('pg')
